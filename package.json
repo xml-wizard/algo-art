@@ -1,0 +1,20 @@
+{
+  "name": "algo-art",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./assets/app.js",
+  "scripts": {
+    "test": "tailwindcss -i ./assets/css/index.css -o ./assets/css/algo-art.css --watch"
+  },
+  "keywords": [],
+  "author": "Dean Tarisai ",
+  "license": "CCO-1.0-Universal",
+  "dependencies": {
+    "eslint": "^8.57.0",
+    "github-emoji": "^1.2.0",
+    "htmx.org": "^1.9.10",
+    "showdown": "^2.1.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  }
+}
