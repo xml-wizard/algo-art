@@ -1,5 +1,5 @@
 // Set the stroke-width for all icons
-
+import htmx from "htmx.org";
 var icons = document.querySelectorAll("svg");
 
 for (const icon of icons) {

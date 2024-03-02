@@ -4,7 +4,8 @@
   >
     <a
       class="inline-flex space-y-1 items-center font-medium text-base"
-      href="./index.html"
+      hx-get="./index.html"
+      hx-trigger="click"
       id="home"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
@@ -73,6 +74,15 @@
       class="inline-flex space-y-1 items-center font-medium text-base"
       href="https://github.com/prjctimg/huetiful"
       id="wiki-link"
+      {#
+      Add
+      a
+      more
+      elegant
+      approach
+      later
+      #}
+      hx-push-url="./w"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
