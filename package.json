@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "./assets/app.js",
   "scripts": {
     "css:dev": "tailwindcss -i ./assets/css/index.css -o ./assets/css/algo-art.css --watch",
     "build": "gulp build",

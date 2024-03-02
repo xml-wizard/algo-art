@@ -4,13 +4,17 @@ import njk from "gulp-nunjucks-render";
 import html from "gulp-beautify";
 var { src, dest, series, watch } = gulp;
 
-var clean = () => deleteSync(["app"]),
-  _html = () =>
-    src("assets/xml/pages/*.+(html|njk)")
-      .pipe(njk({ path: ["assets/xml"] }))
-      .pipe(html({ indent_size: 4, preserve_newlines: false }))
-      .pipe(dest("app")),
-  watchFiles = () => watch("src/html/**/*", _html);
+function watchFiles() {
+  return watch(["assets/xml/**/*+(njk)"], _html);
+}
+function _html() {
+  return src("assets/xml/pages/*.+(html|njk)")
+    .pipe(njk({ path: ["assets/xml"] }))
+    .pipe(dest("app"));
+}
+function clean() {
+  return deleteSync(["app"]);
+}
 
-export const build = series(clean, html);
-export const _default = series(clean, html, watchFiles);
+export const build = series(clean, _html);
+export const _default = series(_html, watchFiles);
