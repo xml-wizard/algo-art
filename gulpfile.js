@@ -16,5 +16,11 @@ function clean() {
   return deleteSync(["app"]);
 }
 
-export const build = series(clean, _html);
-export const _default = series(_html, watchFiles);
+function js() {
+  return src("*assets/js/*").pipe(dest("app"));
+}
+function css() {
+  return src("*assets/css/algo-art.css").pipe(dest("app"));
+}
+export const build = series(_html, css);
+export const _default = series(_html, js, css, watchFiles);
