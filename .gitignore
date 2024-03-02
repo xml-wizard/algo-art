@@ -1,3 +1,5 @@
 node_modules
 package-lock.json
 assets/test.html
+assets/test.css
+assets/test.js

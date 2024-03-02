@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include "../partials/head.njk" %}
-  <body>
-    {% include "../partials/navbar.njk" %}
+  <body class="container">
+    {% include "../partials/navbar.njk" %} {% block content %}
+    {{ content }}
+    {% endblock content %} {% include "../partials/footer.njk" %}
   </body>
 </html>
