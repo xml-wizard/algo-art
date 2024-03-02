@@ -4,6 +4,7 @@
   "description": "",
   "type": "module",
   "scripts": {
+    "css": "tailwindcss -i ./assets/css/index.css -o ./assets/css/algo-art.css",
     "css:dev": "tailwindcss -i ./assets/css/index.css -o ./assets/css/algo-art.css --watch",
     "build": "gulp build",
     "start": "gulp _default"
